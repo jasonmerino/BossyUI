@@ -7,10 +7,10 @@ Created with LOVE by Build.com Open Source Consortium - fostering a collaboratio
 
 ## BossyUI
 
-An opinionated set of AngularJS directives used to build rich and interactive web sites.  
+An opinionated set of AngularJS directives used to build rich and interactive web sites.
 
 ## BossyUI Goals
-1. 100% AngularJS, no JQuery dependencies.
+1. 100% AngularJS, no jQuery dependencies.
 2. Lightweight directives.
 3. 100% themeable.
 
