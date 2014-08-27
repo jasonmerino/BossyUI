@@ -1,9 +1,7 @@
-var gulp = require('gulp');
+gulp = require("gulp")
+module.exports = (tasks) ->
+  tasks.forEach (name) ->
+    gulp.task name, require("./tasks/" + name)
+    return
 
-module.exports = function(tasks) {
-	tasks.forEach(function(name) {
-		gulp.task(name, require('./tasks/' + name));
-	});
-
-	return gulp;
-};
+  gulp

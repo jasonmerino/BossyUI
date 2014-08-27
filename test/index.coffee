@@ -1,2 +1,2 @@
-var chai = require('chai'),
-	expect = chai.expect;
+chai = require("chai")
+expect = chai.expect
