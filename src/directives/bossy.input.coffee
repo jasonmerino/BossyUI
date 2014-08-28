@@ -8,5 +8,5 @@ angular.module("app.directive.bossy.input", []).run(($templateCache) ->
     title: "="
     value: "="
 
-  template: $templateCache.get("bossy-input.html")
+  template: $templateCache.get "bossy-input.html"
 

@@ -1,6 +1,6 @@
 #!
 # * bossy.js
-# 
+#
 
 #!
 # * http://BossyUI.com/
@@ -9,7 +9,7 @@
 # *
 # * Licensed under the MIT license. Please see LICENSE for more information.
 # *
-# 
+#
 
 #TODO: need layout, labels
 bossy = angular.module("bossy", [

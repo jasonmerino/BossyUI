@@ -4,6 +4,4 @@ angular.module("app.directive.bossy.button", []).directive "bossyButton", ($comp
   scope:
     title: "="
     value: "="
-
   template: "<div class=\"form-group bossy-button\"><button class=\"form-control\">{{title}}</button><span></span></div>"
-

@@ -1,4 +1,7 @@
-gulp = require("gulp")
-config = require("../config")
+gulp = require "gulp"
+config = require "../config"
+
 module.exports = ->
-  gulp.src(config.paths.scripts.concat(config.paths.css)).pipe gulp.dest("demo/bossy")
+  gulp
+    .src config.paths.scripts.concat config.paths.css
+    .pipe gulp.dest "demo/bossy"
