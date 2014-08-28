@@ -15,6 +15,7 @@
     "express": "~4.0.0",
     "gulp": "^3.8.7",
     "morgan": "~1.0.0",
-    "static-favicon": "~1.0.0"
+    "static-favicon": "~1.0.0",
+    "coffee-script": "~1.8.0"
   }
 }

@@ -2,12 +2,26 @@ angular.module("app.directive.bossy.form", []).run(($templateCache) ->
   $templateCache.put "bossy-input.html", "templates/bossy-input.html"
   return
 ).directive "bossyForm", ($compile, $http, $schema, $data) ->
+
+  _schema = undefined
+  _data = undefined
+  _itemTemplate =
+    number: ->
+      "<input type=\"number\"/>"
+
+    text: (obj, key, is_required) ->
+      "<bossy-input title=\"'" + obj.title + "'\" value=\"'" + _data.address[key] + "'\"" + ((if is_required then " required" else "")) + "></bossy-input>"
+
+    textArea: ->
+      "<textarea></textarea>"
+
+    checkbox: (obj) ->
+      "<div class=\"checkbox\"><label><input type=\"checkbox\">" + obj.title + "</label></div>"
+
   setData = (data) ->
     _data = $data.getData(data)
-    return
   setSchema = (schema) ->
     _schema = $schema.getSchema(schema)
-    return
   buildTemplate = (schemaPart, parentKey, required) ->
     template = ""
     fullKey = ""
@@ -30,21 +44,6 @@ angular.module("app.directive.bossy.form", []).run(($templateCache) ->
             template += _itemTemplate.checkbox(value)
     ), this
     template
-  _schema = undefined
-  _data = undefined
-  _itemTemplate =
-    number: ->
-      "<input type=\"number\"/>"
-
-    text: (obj, key, is_required) ->
-      "<bossy-input title=\"'" + obj.title + "'\" value=\"'" + _data.address[key] + "'\"" + ((if is_required then " required" else "")) + "></bossy-input>"
-
-    textArea: ->
-      "<textarea></textarea>"
-
-    checkbox: (obj) ->
-      "<div class=\"checkbox\"><label><input type=\"checkbox\">" + obj.title + "</label></div>"
-
   restrict: "E"
   replace: true
   template: ""

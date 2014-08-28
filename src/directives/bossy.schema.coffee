@@ -8,7 +8,7 @@ angular.module("app.factory.bossy.schema", []).factory "$schema", ->
 
       #TODO: replace error message with online doc link like ng errors
       console.error "directive.bossyForm: no schema url or object given"
-    return
+
   _getRemoteSchema = ->
     deferred = $q.defer()
 
@@ -16,9 +16,10 @@ angular.module("app.factory.bossy.schema", []).factory "$schema", ->
     $http.get(schema).success((data) ->
       if angular.isObject(data)
         deferred.resolve data
+        return
       else
         deferred.reject "directive.bossyForm: GET request to url did not produce schema object"
-      return
+        return
     ).error (data, status) ->
 
       #TODO: replace error message with online doc link like ng errors
