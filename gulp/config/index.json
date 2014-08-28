@@ -1,8 +1,8 @@
 {
 	"paths": {
 		"scripts": [
-            "src/bossy.js",
-            "src/directives/bossy.*.js"
+            "src/bossy.coffee",
+            "src/directives/bossy.*.coffee"
         ],
         "scss":[
         	"src/scss/*.scss"
